@@ -1,0 +1,34 @@
+每一个用Linerlayout就行，至于圆角框样式用xml配置一下，里面的横线imageView画一下就行
+这有个例子，效果不一样，你可以试着调一下里面的参数
+drawable/ table_shape.xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android" >
+
+<solid android:color="#fff" />
+
+//设置边距
+<padding
+android:bottom="10dp"
+android:left="10dp"
+android:right="10dp"
+android:top="10dp" />
+
+//控制边界线颜色和笔触大小
+<stroke
+android:width="1dp"
+android:color="#CdCdCd" />
+
+//控制界面颜色渐变（你这个用不到）
+<gradient
+android:startColor="#E9E9E9" 
+android:endColor="#FFFFFF"
+android:type="linear"
+android:angle="90"/>
+
+//控制圆角大小
+<corners android:radius="10dp" />
+
+</shape>
+
+然后在Linerlayout里设置android:background="@drawable/table_shape"
